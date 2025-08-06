@@ -34,15 +34,11 @@ function App() {
   const selectFavorite = (city) => {
     fetchWeather(city);
   };
+  
   const getAppBg = () => {
-    if (!data) return "default-bg"; 
-      if ([0, 1].includes(data.weathercode)) return "sunny-bg";
-        if ([2, 3, 45, 48].includes(data.weathercode)) return "cloudy-bg";
-          if ([51, 53, 55, 61, 63, 65].includes(data.weathercode)) return "rainy-bg";
-            if ([71, 73, 75].includes(data.weathercode)) return "snowy-bg";
-              if ([95, 96, 99].includes(data.weathercode)) return "storm-bg";
-  return "default-bg";
-};
+    return "white-bg";
+  };
+
 
   return (
     <div className={`container ${getAppBg()}`}>
